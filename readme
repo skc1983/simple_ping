@@ -1,0 +1,2 @@
+need su to run the program
+Example: su ./simple_ping 192.168.0.1
