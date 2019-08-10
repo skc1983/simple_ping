@@ -117,20 +117,12 @@ void recv_packet()
 
 int main(int argc, char *argv[])
 {
-	struct hostent *host;
-	struct protoent *protocol;
-
 	unsigned long inaddr;
 	int size = 50 * 1024;
 
 	if (argc < 2)
 	{
 		perror("usage:%s hostname/IP address\n", argv[0]);
-		exit(1);
-	}
-	if ((protocol = getprotobyname("icmp")) == NULL)
-	{
-		perror("getprotobyname\n");
 		exit(1);
 	}
 
